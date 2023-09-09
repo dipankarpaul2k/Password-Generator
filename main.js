@@ -65,7 +65,7 @@ function generateCharacterSet() {
   }
 
   if (charSet.length === 0) {
-    msg = "Invalid: No character sets are selected!";
+    msg = "Invalid: Please select one/more character set/sets.";
     createNotification(msg);
     throw new Error(msg); // Throw an error instead of returning nothing
   }
