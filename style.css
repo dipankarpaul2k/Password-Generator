@@ -51,7 +51,7 @@ body {
   border: 2px solid black;
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   height: 50px;
   display: flex;
   align-items: center;
@@ -122,7 +122,7 @@ button {
 #checkboxDiv {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #checkboxDiv > div {
@@ -146,10 +146,15 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 450px) {
+  .lengthInput{
+    margin-bottom: 1.5rem;
+  }
+  
   #checkboxDiv {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 1.5rem;
   }
 
   #checkboxDiv > div {
