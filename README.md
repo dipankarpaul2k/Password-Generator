@@ -2,9 +2,11 @@
 
 This is a simple web application for generating strong and secure passwords. The application allows users to customize the length of the password and select from various character sets, including uppercase letters, lowercase letters, numbers, and symbols. Users can also copy the generated password to their clipboard for easy use.
 
-![Password Generator Screenshot]()
+## Screenshot
 
-![Password Generator Mobile View Screenshot]()
+![Password Generator Screenshot](https://github.com/dipankarpaul2k/Password-Generator/assets/136841290/3c82b479-507c-49bb-8831-36df5a0e849e)
+
+![Password Generator Mobile View Screenshot](https://github.com/dipankarpaul2k/Password-Generator/assets/136841290/5aec2554-2c33-400c-9c66-85df798a16b1)
 
 ## Features
 
@@ -37,7 +39,7 @@ To run the Password Generator Web App locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone 
+   git clone https://github.com/dipankarpaul2k/Password-Generator.git
    ```
 
 2. Navigate to the project directory:
