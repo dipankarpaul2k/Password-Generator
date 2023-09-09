@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "poppins", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  /* background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80); */
+  /* background-image: url(https://images.unsplash.com/photo-1614064745729-79e39d1b39b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover; */
+
+  background: radial-gradient(circle, #000000 10%, transparent 11%);
+  background-size: 1em 1em;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+}
+
+.lengthInput {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="number"],
+input[type="text"] {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  font-family: "poppins", sans-serif;
+  background-color: transparent;
+}
+
+input[type="number"]::placeholder,
+input[type="text"]::placeholder {
+  color: black;
+}
+
+/* input[type="text"]{
+  cursor: none;
+} */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.displayPassword {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.displayPassword > img {
+  height: 20px;
+  cursor: pointer;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+button {
+  flex: 1;
+  outline: 0;
+  border: 0;
+  width: fit-content;
+  font-size: 1rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 550;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#checkboxDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#checkboxDiv > div {
+  width: 50%;
+  text-align: left;
+}
+
+#checkboxDiv > div:nth-child(2) {
+  text-align: right;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#checkboxDiv label {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  #checkboxDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #checkboxDiv > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #checkboxDiv label {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+#notificationBox {
+  width: fit-content;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.notification {
+  width: fit-content;
+  min-width: 350px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid black;
+  padding: 1rem 1.5rem;
+  margin: 10px 0;
+  box-shadow: 1px 1px 3px gray;
+  backdrop-filter: blur(5px);
+  position: relative;
+  transform: translateX(100%);
+  animation: slideX 0.2s linear forwards;
+}
+
+/* Notificationbox animation */
+@keyframes slideX {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.notification::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  animation: progress 3s linear forwards;
+}
+
+/* Notification progress animation */
+@keyframes progress {
+  to {
+    width: 0;
+  }
+}
+
+.notification.success::after {
+  background-color: green;
+}
+
+.notification.error::after {
+  background-color: red;
+}
+
+.notification.invalid::after {
+  background-color: orange;
+}
+
+@media screen and (max-width: 600px) {
+  #notificationBox {
+    position: absolute;
+    bottom: unset;
+    right: unset;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .notification {
+    min-width: 300px;
+    padding: 0.7rem 1rem;
+    margin: 5px 0 10px;
+    font-size: 0.8rem;
+    transform: translateY(-100%);
+    animation: slideY 0.2s linear forwards;
+  }
+
+  /* Notificationbox animation */
+  @keyframes slideY {
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Links styling */
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+.profile-link {
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);
+  cursor: pointer;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+.profile-link > span {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.profile-link > img {
+  width: max(20px, 5vw);
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-link {
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .profile-link > span {
+    display: none;
+  }
+
+  .profile-link > img {
+    display: block;
+  }
+}

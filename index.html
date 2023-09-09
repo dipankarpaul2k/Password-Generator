@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/3427/3427189.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1 class="heading">Password Generator</h1>
+        <form>
+          <div class="lengthInput">
+            <input
+              id="passwordLength"
+              type="number"
+              placeholder="Enter the password length"
+              autocomplete="off"
+            />
+          </div>
+          <div id="checkboxDiv">
+            <div>
+              <div>
+                <input type="checkbox" id="uppercaseCheckbox" />
+                <label for="uppercaseCheckbox">Uppercase Letters</label><br />
+              </div>
+              <div>
+                <input type="checkbox" id="lowercaseCheckbox" />
+                <label for="lowercaseCheckbox">Lowercase Letters</label><br />
+              </div>
+            </div>
+            <div>
+              <div>
+                <input type="checkbox" id="numberCheckbox" />
+                <label for="numberCheckbox">Numbers</label><br />
+              </div>
+              <div>
+                <input type="checkbox" id="symbolCheckbox" />
+                <label for="symbolCheckbox">Symbols</label><br />
+              </div>
+            </div>
+          </div>
+          <div class="displayPassword">
+            <input id="password" type="text" placeholder="Password" readonly />
+            <img
+              id="copyIcon"
+              src="https://cdn-icons-png.flaticon.com/128/1621/1621635.png"
+              alt="copy img icon"
+            />
+          </div>
+          <div class="buttons">
+            <button>Generate Password</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Notification Box -->
+      <div id="notificationBox"></div>
+
+    </div>
+
+    <!-- Profile Links -->
+    <div class="linkContainer">
+      <a
+        id="profile-link"
+        class="profile-link"
+        href="https://github.com/dipankarpaul2k"
+        target="_blank"
+      >
+        <span>GitHub</span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png"
+          alt="github icon"
+        />
+      </a>
+      <a
+        id="profile-link"
+        class="profile-link"
+        href="https://codepen.io/dipankarpaul2k"
+        target="_blank"
+      >
+        <span>CodePen</span>
+        <img
+          src="https://cdn.iconscout.com/icon/free/png-512/free-codepen-5-457935.png?f=avif&w=256"
+          alt="codepen icon"
+        />
+      </a>
+      <a
+        id="profile-link"
+        class="profile-link"
+        href="https://www.linkedin.com/in/iamdipankarpaul/"
+        target="_blank"
+      >
+        <span>LinkedIn</span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"
+          alt="linkedin icon"
+        />
+      </a>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
