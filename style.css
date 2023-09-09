@@ -259,7 +259,7 @@ input[type="checkbox"] {
 
   .notification {
     min-width: 300px;
-    padding: 0.7rem 1rem;
+    padding: 1rem 1rem 1.3rem;
     margin: 5px 0 10px;
     font-size: 0.8rem;
     transform: translateY(-100%);
@@ -310,7 +310,7 @@ input[type="checkbox"] {
 }
 
 .profile-link > img {
-  width: max(20px, 5vw);
+  width: max(24px, 5vw);
   display: none;
 }
 
