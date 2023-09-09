@@ -15,10 +15,7 @@ body {
   width: 100%;
   height: 100dvh;
   position: relative;
-  /* background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80); */
-  /* background-image: url(https://images.unsplash.com/photo-1614064745729-79e39d1b39b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
-  background-size: cover; */
-
+  padding: 0 1rem;
   background: radial-gradient(circle, #000000 10%, transparent 11%);
   background-size: 1em 1em;
   background-color: #ffffff;
@@ -47,7 +44,7 @@ body {
 
 @media screen and (max-width: 450px) {
   .heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -63,6 +60,7 @@ input[type="text"] {
   outline: 0;
   border: 0;
   width: 100%;
+  font-weight: 500;
   font-family: "poppins", sans-serif;
   background-color: transparent;
 }
